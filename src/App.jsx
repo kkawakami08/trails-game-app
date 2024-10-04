@@ -1,10 +1,10 @@
-import wildlifeIcon from "./assets/wildlife-icon.svg";
-import "./App.css";
+import BadgeCard from "./components/BadgeCard";
 
 function App() {
   return (
-    <div>
-      <p>Testing...</p>
+    <div className="bg-red-900 h-screen w-screen">
+      <BadgeCard />
+      <p>hi</p>
     </div>
   );
 }
