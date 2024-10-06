@@ -1,4 +1,4 @@
-import BadgeCard from "./components/BadgeCard";
+import BadgeCard from "./components/badge/BadgeCard";
 
 function App() {
   return (

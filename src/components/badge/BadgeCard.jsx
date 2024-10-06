@@ -1,24 +1,17 @@
-import BadgeBanner from "../assets/badge-banner.svg?react";
-import acornIcon from "../assets/icon-acorn.svg";
-import leafIcon from "../assets/icon-leaf.svg";
-import rockIcon from "../assets/icon-rock.svg";
-import badgePic from "../assets/badge-birdwatching-acorn.svg";
-import twoBirdPoints from "../assets/icon-points-two-birds.svg";
+import acornIcon from "../../assets/icon-acorn.svg";
+import leafIcon from "../../assets/icon-leaf.svg";
+import rockIcon from "../../assets/icon-rock.svg";
+import badgePic from "../../assets/badge-birdwatching-acorn.svg";
+import twoBirdPoints from "../../assets/icon-points-two-birds.svg";
+import oneBirdPoint from "../../assets/icon-points-one-bird.svg";
+import pointIcon from "../../assets/icon-points.svg";
 
-//dynamic variables:
-// Header bg color
-// title
-// badge banner color
-// resource icon
+import BadgeBanner from "./BadgeBanner";
 
 const BadgeCard = () => {
   return (
-    <div className="bg-[#4F2C18] w-48 h-60 rounded-lg flex flex-col items-center">
-      {/* //section bookmark banner */}
-      <div className="absolute left-3 flex  justify-center">
-        <BadgeBanner className="w-7 text-[#D88A7D]" />
-        <img src={acornIcon} className="absolute w-5 top-3  " />
-      </div>
+    <div className="bg-[#4F2C18] w-56 h-60 rounded-lg flex flex-col items-center">
+      <BadgeBanner resourceType={acornIcon} bgColor={"pale-brown"} />
       {/* //section badge name */}
       <p className="bg-[#B54B32] text-white rounded-t-lg text-right font-bold text-xs py-2 px-3 tracking-wider w-full">
         {"birdwatching".toUpperCase()}
@@ -41,14 +34,18 @@ const BadgeCard = () => {
         </div>
       </div>
       {/* //section badge description */}
-      <div className="bg-white flex justify-center py-3 rounded-b-lg w-full">
-        {/* //note bird points specific */}
-        <div className="w-16 relative">
+      <div className="bg-white flex justify-center py-3 rounded-b-lg w-full gap-2 p-3">
+        {/* //note make point icon div into component */}
+        <div className="min-w-16 relative ">
           <img src={twoBirdPoints} className="object-cover" />
-          <p className="text-xl text-white font-semibold absolute inset-0 flex items-center justify-center mt-2">
+          <p className="text-xl text-white font-semibold absolute inset-0 flex items-center justify-center top-2">
             3
           </p>
         </div>
+        {/* <p className=" text-xs">
+          Earn a <strong>BADGE</strong> next to you or from your hand without
+          paying its cost
+        </p> */}
       </div>
     </div>
   );
