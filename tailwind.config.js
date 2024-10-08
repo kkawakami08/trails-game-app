@@ -23,6 +23,8 @@ export default {
         "pale-brown": "#D88A7D",
         "pale-grey": "#DBDAD5",
         "pale-green": "#D8C782",
+        "light-brown": "#B3814C",
+        "pale-light-brown": "#EDC7B1",
       },
     },
   },

@@ -2,6 +2,7 @@ import BadgeBannerIcon from "@/assets/badge-banner.svg?react";
 import acornIcon from "@/assets/icon-acorn.svg";
 import rockIcon from "@/assets/icon-rock.svg";
 import leafIcon from "@/assets/icon-leaf.svg";
+import anyIcon from "@/assets/icon-any.svg";
 
 const BadgeHeader = ({ resourceType, badgeName }) => {
   let headerData = {
@@ -21,6 +22,12 @@ const BadgeHeader = ({ resourceType, badgeName }) => {
       resourceIcon: rockIcon,
       bannerBG: "text-pale-grey",
       headerBG: "bg-rock-grey",
+    };
+  } else if (resourceType === "any") {
+    headerData = {
+      resourceIcon: anyIcon,
+      bannerBG: "text-pale-light-brown",
+      headerBG: "bg-light-brown",
     };
   }
 
