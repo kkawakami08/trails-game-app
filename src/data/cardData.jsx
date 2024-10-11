@@ -598,20 +598,16 @@ export const badges = [
     points: 2,
     birds: 0,
     description: () => (
-      <p className="text-xs font-serif flex flex-wrap items-center gap-x-1">
-        <span className="flex flex-wrap">
-          Cost one less
-          <img src={rockIcon} alt="leaf" className="w-5 mx-[.1rem]" />
-          for
-        </span>{" "}
-        each
-        <span className="relative inline-flex items-center mx-0.5">
-          <ShortBadgeBannerIcon className="w-6 text-pale-grey" />
+      <p className="text-xs font-serif flex flex-wrap items-center gap-1 -ml-3  ">
+        Const one less
+        <img src={rockIcon} alt="leaf" className="w-5 mx-[.1rem]" /> for each
+        <span className="relative inline-flex items-center">
+          <ShortBadgeBannerIcon className="w-[1.2rem] text-pale-grey" />
           <img
             src={rockIcon}
-            className="w-4 absolute top-[.9rem] left-1 transform -translate-y-1/2"
+            className="w-[.9rem] absolute top-[.75rem] left-[.14rem] transform -translate-y-1/2"
           />
-        </span>
+        </span>{" "}
         you have
       </p>
     ),
@@ -631,20 +627,16 @@ export const badges = [
     points: 2,
     birds: 0,
     description: () => (
-      <p className="text-xs font-serif flex flex-wrap items-center gap-x-1">
-        <span className="flex flex-wrap">
-          Cost one less
-          <img src={acornIcon} alt="leaf" className="w-5 mx-[.1rem]" />
-          for
-        </span>{" "}
-        each
-        <span className="relative inline-flex items-center mx-0.5">
-          <ShortBadgeBannerIcon className="w-6 text-pale-brown" />
+      <p className="text-xs font-serif flex flex-wrap items-center gap-1 -ml-3  ">
+        Const one less
+        <img src={acornIcon} alt="leaf" className="w-5 mx-[.1rem]" /> for each
+        <span className="relative inline-flex items-center">
+          <ShortBadgeBannerIcon className="w-[1.2rem] text-pale-brown" />
           <img
             src={acornIcon}
-            className="w-4 absolute top-[.9rem] left-1 transform -translate-y-1/2"
+            className="w-[.9rem] absolute top-[.75rem] left-[.14rem] transform -translate-y-1/2"
           />
-        </span>
+        </span>{" "}
         you have
       </p>
     ),
@@ -664,20 +656,16 @@ export const badges = [
     points: 2,
     birds: 0,
     description: () => (
-      <p className="text-xs font-serif flex flex-wrap items-center gap-x-1">
-        <span className="flex flex-wrap">
-          Cost one less
-          <img src={leafIcon} alt="leaf" className="w-5 mx-[.1rem]" />
-          for
-        </span>{" "}
-        each
-        <span className="relative inline-flex items-center mx-0.5">
-          <ShortBadgeBannerIcon className="w-6 text-pale-green" />
+      <p className="text-xs font-serif flex flex-wrap items-center gap-1 -ml-3  ">
+        Const one less
+        <img src={leafIcon} alt="leaf" className="w-5 mx-[.1rem]" /> for each
+        <span className="relative inline-flex items-center">
+          <ShortBadgeBannerIcon className="w-[1.2rem] text-pale-green" />
           <img
             src={leafIcon}
-            className="w-4 absolute top-[.9rem] left-1 transform -translate-y-1/2"
+            className="w-[.9rem] absolute top-[.75rem] left-[.14rem] transform -translate-y-1/2"
           />
-        </span>
+        </span>{" "}
         you have
       </p>
     ),

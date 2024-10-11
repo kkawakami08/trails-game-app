@@ -49,7 +49,7 @@ const BadgeCost = ({ cost, resourceType }) => {
         {getResourcesInOrder()}
       </div>
       {/* centered upside down triangle */}
-      <div className="absolute w-full flex justify-center -bottom-2">
+      <div className="absolute w-full flex justify-center -bottom-[0.45rem]">
         <svg viewBox="0 0 20 10" className="w-4 h-2 fill-slate-200">
           <path d="M0,0 L20,0 L10,10 Z" />
         </svg>

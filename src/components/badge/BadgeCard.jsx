@@ -22,7 +22,7 @@ const BadgeCard = ({ badge }) => {
         className="w-56 bg-slate-200 text-black text-center text-xs"
       >
         <div
-          className={`h-fit bg-white flex justify-center items-center py-3 rounded-b-lg w-56 gap-2 p-2 ${
+          className={`h-[5.5rem] bg-white flex justify-center items-center py-3 rounded-b-lg w-56 gap-2 p-2 ${
             badge.birds === 0 && badge.name !== "Climber" && "pr-8"
           }`}
         >
