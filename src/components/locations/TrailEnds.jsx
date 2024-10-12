@@ -11,12 +11,32 @@ import StartTwoPlayer from "./StartTwoPlayer";
 import StartFourPlayer from "./StartFourPlayer";
 
 const TrailEnds = ({ playerCount, location }) => {
+  const trailStart = {
+    bg: trailHeadBG,
+    btmAction: () => <img src={canteen} className="w-10" />,
+    badge: dayBadge,
+    arrowClass: "bg-dark-green right-2",
+    arrowRotation: "rotate-45",
+  };
+  const trailEnd = {
+    bg: trailEndBG,
+    btmAction: () => (
+      <div className="flex flex-col items-center -mb-2">
+        <img src={sunIcon} className="w-12" />
+        <FaLongArrowAltLeft className="text-3xl text-dark-blue -mt-3" />
+      </div>
+    ),
+    badge: nightBadge,
+    arrowClass: "bg-light-blue left-2",
+    arrowRotation: "-rotate-[137deg]",
+  };
+
   return (
     <div
       className="h-[26rem] w-56 bg-cover bg-center flex flex-col items-center py-4 justify-between relative"
       style={{
         backgroundImage: `url(${
-          location === "start" ? trailHeadBG : trailEndBG
+          location === "start" ? trailStart.bg : trailEnd.bg
         })`,
       }}
     >
@@ -26,30 +46,23 @@ const TrailEnds = ({ playerCount, location }) => {
         <StartTwoPlayer location={location} />
       )}
       <div className="bg-white flex flex-col rounded-full items-center gap-2 w-[4.2rem] h-[8rem] justify-center ">
-        {location === "start" ? (
-          <img src={canteen} className="w-10" />
-        ) : (
-          <div className="flex flex-col items-center -mb-2">
-            <img src={sunIcon} className="w-12" />
-            <FaLongArrowAltLeft className="text-3xl text-dark-blue -mt-3" />
-          </div>
-        )}
+        {location === "start" ? trailStart.btmAction() : trailEnd.btmAction()}
 
         <img
-          src={location === "start" ? dayBadge : nightBadge}
+          src={location === "start" ? trailStart.badge : trailEnd.badge}
           className="w-10"
         />
       </div>
       <div
         className={`${
-          location === "start"
-            ? "bg-dark-green right-2"
-            : "bg-light-blue left-2"
+          location === "start" ? trailStart.arrowClass : trailEnd.arrowClass
         } rounded-full p-[.15rem] absolute bottom-2 `}
       >
         <TiLocationArrow
           className={`text-white ${
-            location === "start" ? "rotate-45" : "-rotate-[135deg]"
+            location === "start"
+              ? trailStart.arrowRotation
+              : trailEnd.arrowRotation
           } text-lg`}
         />
       </div>
