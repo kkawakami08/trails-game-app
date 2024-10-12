@@ -5,7 +5,10 @@ import leafIcon from "@/assets/icon-leaf.svg";
 import rockIcon from "@/assets/icon-rock.svg";
 
 const StartFourPlayer = ({ location }) => {
-  const resources = [acornIcon, leafIcon, rockIcon];
+  const resources =
+    location === "start"
+      ? [rockIcon, acornIcon, leafIcon]
+      : [leafIcon, acornIcon, rockIcon];
   return (
     <div className="flex  w-full justify-evenly ">
       {location === "start" && (
