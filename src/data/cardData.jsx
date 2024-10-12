@@ -4,7 +4,6 @@ import acornIcon from "@/assets/icon-acorn.svg";
 import rockIcon from "@/assets/icon-rock.svg";
 import sunIcon from "@/assets/icon-sun.svg";
 import { BsSlashLg } from "react-icons/bs";
-import BadgeBannerIcon from "@/assets/badge-banner.svg?react";
 import ShortBadgeBannerIcon from "@/assets/badge-banner-short.svg?react";
 import photoIcon from "@/assets/icon-photo.svg";
 import dayTradeIcon from "@/assets/icon-trade-day.svg";
@@ -20,7 +19,10 @@ export const badges = [
       leaf: 0,
       rock: 0,
     },
-    image: new URL(`@/assets/badge-astronomy-acorn.svg`, import.meta.url).href,
+    image: new URL(
+      `@/assets/badge-cards/badge-astronomy-acorn.svg`,
+      import.meta.url
+    ).href,
     points: 1,
     birds: 0,
     description: () => (
@@ -41,8 +43,10 @@ export const badges = [
       leaf: 1,
       rock: 2,
     },
-    image: new URL(`@/assets/badge-birdwatching-rock.svg`, import.meta.url)
-      .href,
+    image: new URL(
+      `@/assets/badge-cards/badge-birdwatching-rock.svg`,
+      import.meta.url
+    ).href,
     points: 3,
     birds: 2,
     description: () => {},
@@ -57,8 +61,10 @@ export const badges = [
       leaf: 2,
       rock: 1,
     },
-    image: new URL(`@/assets/badge-birdwatching-leaf.svg`, import.meta.url)
-      .href,
+    image: new URL(
+      `@/assets/badge-cards/badge-birdwatching-leaf.svg`,
+      import.meta.url
+    ).href,
     points: 3,
     birds: 2,
     description: () => {},
@@ -73,8 +79,10 @@ export const badges = [
       leaf: 1,
       rock: 1,
     },
-    image: new URL(`@/assets/badge-birdwatching-acorn.svg`, import.meta.url)
-      .href,
+    image: new URL(
+      `@/assets/badge-cards/badge-birdwatching-acorn.svg`,
+      import.meta.url
+    ).href,
     points: 3,
     birds: 2,
     description: () => {},
@@ -89,8 +97,10 @@ export const badges = [
       leaf: 1,
       rock: 0,
     },
-    image: new URL(`@/assets/badge-cartography-acorn.svg`, import.meta.url)
-      .href,
+    image: new URL(
+      `@/assets/badge-cards/badge-cartography-acorn.svg`,
+      import.meta.url
+    ).href,
     points: 3,
     birds: 0,
     description: () => (
@@ -110,7 +120,10 @@ export const badges = [
       leaf: 0,
       rock: 3,
     },
-    image: new URL(`@/assets/badge-cartography-rock.svg`, import.meta.url).href,
+    image: new URL(
+      `@/assets/badge-cards/badge-cartography-rock.svg`,
+      import.meta.url
+    ).href,
     points: 3,
     birds: 0,
     description: () => (
@@ -130,7 +143,10 @@ export const badges = [
       leaf: 3,
       rock: 1,
     },
-    image: new URL(`@/assets/badge-cartography-leaf.svg`, import.meta.url).href,
+    image: new URL(
+      `@/assets/badge-cards/badge-cartography-leaf.svg`,
+      import.meta.url
+    ).href,
     points: 3,
     birds: 0,
     description: () => (
@@ -150,7 +166,10 @@ export const badges = [
       leaf: 0,
       rock: 0,
     },
-    image: new URL(`@/assets/badge-climber-acorn.svg`, import.meta.url).href,
+    image: new URL(
+      `@/assets/badge-cards/badge-climber-acorn.svg`,
+      import.meta.url
+    ).href,
     points: 6,
     birds: 0,
     description: () => {},
@@ -165,7 +184,10 @@ export const badges = [
       leaf: 0,
       rock: 5,
     },
-    image: new URL(`@/assets/badge-climber-rock.svg`, import.meta.url).href,
+    image: new URL(
+      `@/assets/badge-cards/badge-climber-rock.svg`,
+      import.meta.url
+    ).href,
     points: 6,
     birds: 0,
     description: () => {},
@@ -180,7 +202,10 @@ export const badges = [
       leaf: 5,
       rock: 0,
     },
-    image: new URL(`@/assets/badge-climber-leaf.svg`, import.meta.url).href,
+    image: new URL(
+      `@/assets/badge-cards/badge-climber-leaf.svg`,
+      import.meta.url
+    ).href,
     points: 6,
     birds: 0,
     description: () => {},
@@ -195,7 +220,10 @@ export const badges = [
       leaf: 3,
       rock: 0,
     },
-    image: new URL(`@/assets/badge-collector-leaf.svg`, import.meta.url).href,
+    image: new URL(
+      `@/assets/badge-cards/badge-collector-leaf.svg`,
+      import.meta.url
+    ).href,
     points: 1,
     birds: 0,
     description: () => (
@@ -219,7 +247,10 @@ export const badges = [
       leaf: 0,
       rock: 0,
     },
-    image: new URL(`@/assets/badge-collector-acorn.svg`, import.meta.url).href,
+    image: new URL(
+      `@/assets/badge-cards/badge-collector-acorn.svg`,
+      import.meta.url
+    ).href,
     points: 1,
     birds: 0,
     description: () => (
@@ -243,7 +274,10 @@ export const badges = [
       leaf: 0,
       rock: 3,
     },
-    image: new URL(`@/assets/badge-collector-rock.svg`, import.meta.url).href,
+    image: new URL(
+      `@/assets/badge-cards/badge-collector-rock.svg`,
+      import.meta.url
+    ).href,
     points: 1,
     birds: 0,
     description: () => (
@@ -267,7 +301,10 @@ export const badges = [
       leaf: 0,
       rock: 2,
     },
-    image: new URL(`@/assets/badge-firstAid-rock.svg`, import.meta.url).href,
+    image: new URL(
+      `@/assets/badge-cards/badge-firstAid-rock.svg`,
+      import.meta.url
+    ).href,
     points: 1,
     birds: 0,
     description: () => (
@@ -294,7 +331,10 @@ export const badges = [
       leaf: 0,
       rock: 0,
     },
-    image: new URL(`@/assets/badge-firstAid-acorn.svg`, import.meta.url).href,
+    image: new URL(
+      `@/assets/badge-cards/badge-firstAid-acorn.svg`,
+      import.meta.url
+    ).href,
     points: 1,
     birds: 0,
     description: () => (
@@ -321,7 +361,10 @@ export const badges = [
       leaf: 2,
       rock: 0,
     },
-    image: new URL(`@/assets/badge-firstAid-leaf.svg`, import.meta.url).href,
+    image: new URL(
+      `@/assets/badge-cards/badge-firstAid-leaf.svg`,
+      import.meta.url
+    ).href,
     points: 1,
     birds: 0,
     description: () => (
@@ -348,7 +391,10 @@ export const badges = [
       leaf: 1,
       rock: 3,
     },
-    image: new URL(`@/assets/badge-navigation-rock.svg`, import.meta.url).href,
+    image: new URL(
+      `@/assets/badge-cards/badge-navigation-rock.svg`,
+      import.meta.url
+    ).href,
     points: 3,
     birds: 0,
     description: () => (
@@ -368,7 +414,10 @@ export const badges = [
       leaf: 3,
       rock: 0,
     },
-    image: new URL(`@/assets/badge-navigation-leaf.svg`, import.meta.url).href,
+    image: new URL(
+      `@/assets/badge-cards/badge-navigation-leaf.svg`,
+      import.meta.url
+    ).href,
     points: 3,
     birds: 0,
     description: () => (
@@ -388,7 +437,10 @@ export const badges = [
       leaf: 0,
       rock: 1,
     },
-    image: new URL(`@/assets/badge-navigation-acorn.svg`, import.meta.url).href,
+    image: new URL(
+      `@/assets/badge-cards/badge-navigation-acorn.svg`,
+      import.meta.url
+    ).href,
     points: 3,
     birds: 0,
     description: () => (
@@ -408,7 +460,10 @@ export const badges = [
       leaf: 1,
       rock: 2,
     },
-    image: new URL(`@/assets/badge-observer-rock.svg`, import.meta.url).href,
+    image: new URL(
+      `@/assets/badge-cards/badge-observer-rock.svg`,
+      import.meta.url
+    ).href,
     points: 2,
     birds: 1,
     description: () => (
@@ -432,7 +487,10 @@ export const badges = [
       leaf: 0,
       rock: 1,
     },
-    image: new URL(`@/assets/badge-observer-acorn.svg`, import.meta.url).href,
+    image: new URL(
+      `@/assets/badge-cards/badge-observer-acorn.svg`,
+      import.meta.url
+    ).href,
     points: 2,
     birds: 1,
     description: () => (
@@ -456,7 +514,10 @@ export const badges = [
       leaf: 2,
       rock: 0,
     },
-    image: new URL(`@/assets/badge-observer-leaf.svg`, import.meta.url).href,
+    image: new URL(
+      `@/assets/badge-cards/badge-observer-leaf.svg`,
+      import.meta.url
+    ).href,
     points: 2,
     birds: 1,
     description: () => (
@@ -480,7 +541,10 @@ export const badges = [
       leaf: 3,
       rock: 0,
     },
-    image: new URL(`@/assets/badge-photography-leaf.svg`, import.meta.url).href,
+    image: new URL(
+      `@/assets/badge-cards/badge-photography-leaf.svg`,
+      import.meta.url
+    ).href,
     points: 4,
     birds: 0,
     description: () => <img src={photoIcon} className="w-10 -ml-3" />,
@@ -495,8 +559,10 @@ export const badges = [
       leaf: 0,
       rock: 2,
     },
-    image: new URL(`@/assets/badge-photography-acorn.svg`, import.meta.url)
-      .href,
+    image: new URL(
+      `@/assets/badge-cards/badge-photography-acorn.svg`,
+      import.meta.url
+    ).href,
     points: 4,
     birds: 0,
     description: () => <img src={photoIcon} className="w-10 -ml-3" />,
@@ -511,7 +577,10 @@ export const badges = [
       leaf: 2,
       rock: 3,
     },
-    image: new URL(`@/assets/badge-photography-rock.svg`, import.meta.url).href,
+    image: new URL(
+      `@/assets/badge-cards/badge-photography-rock.svg`,
+      import.meta.url
+    ).href,
     points: 4,
     birds: 0,
     description: () => <img src={photoIcon} className="w-10 -ml-3" />,
@@ -526,7 +595,10 @@ export const badges = [
       leaf: 0,
       rock: 4,
     },
-    image: new URL(`@/assets/badge-rappelling-rock.svg`, import.meta.url).href,
+    image: new URL(
+      `@/assets/badge-cards/badge-rappelling-rock.svg`,
+      import.meta.url
+    ).href,
     points: 0,
     birds: 0,
     description: () => (
@@ -546,7 +618,10 @@ export const badges = [
       leaf: 2,
       rock: 1,
     },
-    image: new URL(`@/assets/badge-recycling-leaf.svg`, import.meta.url).href,
+    image: new URL(
+      `@/assets/badge-cards/badge-recycling-leaf.svg`,
+      import.meta.url
+    ).href,
     points: 4,
     birds: 0,
     description: () => <img src={dayTradeIcon} className="w-24 -ml-3" />,
@@ -562,7 +637,10 @@ export const badges = [
       leaf: 1,
       rock: 1,
     },
-    image: new URL(`@/assets/badge-recycling-acorn.svg`, import.meta.url).href,
+    image: new URL(
+      `@/assets/badge-cards/badge-recycling-acorn.svg`,
+      import.meta.url
+    ).href,
     points: 4,
     birds: 0,
     description: () => <img src={dayTradeIcon} className="w-24 -ml-3" />,
@@ -578,7 +656,10 @@ export const badges = [
       leaf: 1,
       rock: 2,
     },
-    image: new URL(`@/assets/badge-recycling-rock.svg`, import.meta.url).href,
+    image: new URL(
+      `@/assets/badge-cards/badge-recycling-rock.svg`,
+      import.meta.url
+    ).href,
     points: 4,
     birds: 0,
     description: () => <img src={dayTradeIcon} className="w-24 -ml-3" />,
@@ -594,7 +675,10 @@ export const badges = [
       leaf: 0,
       rock: 3,
     },
-    image: new URL(`@/assets/badge-research-rock.svg`, import.meta.url).href,
+    image: new URL(
+      `@/assets/badge-cards/badge-research-rock.svg`,
+      import.meta.url
+    ).href,
     points: 2,
     birds: 0,
     description: () => (
@@ -623,7 +707,10 @@ export const badges = [
       leaf: 0,
       rock: 0,
     },
-    image: new URL(`@/assets/badge-research-acorn.svg`, import.meta.url).href,
+    image: new URL(
+      `@/assets/badge-cards/badge-research-acorn.svg`,
+      import.meta.url
+    ).href,
     points: 2,
     birds: 0,
     description: () => (
@@ -652,7 +739,10 @@ export const badges = [
       leaf: 3,
       rock: 0,
     },
-    image: new URL(`@/assets/badge-research-leaf.svg`, import.meta.url).href,
+    image: new URL(
+      `@/assets/badge-cards/badge-research-leaf.svg`,
+      import.meta.url
+    ).href,
     points: 2,
     birds: 0,
     description: () => (
@@ -681,7 +771,10 @@ export const badges = [
       leaf: 1,
       rock: 1,
     },
-    image: new URL(`@/assets/badge-science-any.svg`, import.meta.url).href,
+    image: new URL(
+      `@/assets/badge-cards/badge-science-any.svg`,
+      import.meta.url
+    ).href,
     points: 3,
     birds: 0,
     description: () => (
@@ -712,7 +805,10 @@ export const badges = [
       leaf: 1,
       rock: 1,
     },
-    image: new URL(`@/assets/badge-science-any.svg`, import.meta.url).href,
+    image: new URL(
+      `@/assets/badge-cards/badge-science-any.svg`,
+      import.meta.url
+    ).href,
     points: 3,
     birds: 0,
     description: () => (
@@ -743,7 +839,10 @@ export const badges = [
       leaf: 1,
       rock: 1,
     },
-    image: new URL(`@/assets/badge-science-any.svg`, import.meta.url).href,
+    image: new URL(
+      `@/assets/badge-cards/badge-science-any.svg`,
+      import.meta.url
+    ).href,
     points: 3,
     birds: 0,
     description: () => (
@@ -774,7 +873,10 @@ export const badges = [
       leaf: 2,
       rock: 1,
     },
-    image: new URL(`@/assets/badge-seeker-leaf.svg`, import.meta.url).href,
+    image: new URL(
+      `@/assets/badge-cards/badge-seeker-leaf.svg`,
+      import.meta.url
+    ).href,
     points: 2,
     birds: 1,
     description: () => <img src={wildlifeIcon} className="w-14 -ml-3" />,
@@ -789,7 +891,10 @@ export const badges = [
       leaf: 0,
       rock: 2,
     },
-    image: new URL(`@/assets/badge-seeker-rock.svg`, import.meta.url).href,
+    image: new URL(
+      `@/assets/badge-cards/badge-seeker-rock.svg`,
+      import.meta.url
+    ).href,
     points: 2,
     birds: 1,
     description: () => <img src={wildlifeIcon} className="w-14 -ml-3" />,
@@ -804,7 +909,10 @@ export const badges = [
       leaf: 1,
       rock: 0,
     },
-    image: new URL(`@/assets/badge-seeker-acorn.svg`, import.meta.url).href,
+    image: new URL(
+      `@/assets/badge-cards/badge-seeker-acorn.svg`,
+      import.meta.url
+    ).href,
     points: 2,
     birds: 1,
     description: () => <img src={wildlifeIcon} className="w-14 -ml-3" />,
@@ -819,7 +927,10 @@ export const badges = [
       leaf: 4,
       rock: 0,
     },
-    image: new URL(`@/assets/badge-shutterbug-leaf.svg`, import.meta.url).href,
+    image: new URL(
+      `@/assets/badge-cards/badge-shutterbug-leaf.svg`,
+      import.meta.url
+    ).href,
     points: 2,
     birds: 0,
     description: () => (
@@ -839,7 +950,10 @@ export const badges = [
       leaf: 0,
       rock: 3,
     },
-    image: new URL(`@/assets/badge-sunshine-rock.svg`, import.meta.url).href,
+    image: new URL(
+      `@/assets/badge-cards/badge-sunshine-rock.svg`,
+      import.meta.url
+    ).href,
     points: 5,
     birds: 0,
     description: () => (
@@ -865,7 +979,10 @@ export const badges = [
       leaf: 2,
       rock: 0,
     },
-    image: new URL(`@/assets/badge-sunshine-acorn.svg`, import.meta.url).href,
+    image: new URL(
+      `@/assets/badge-cards/badge-sunshine-acorn.svg`,
+      import.meta.url
+    ).href,
     points: 5,
     birds: 0,
     description: () => (
@@ -891,7 +1008,10 @@ export const badges = [
       leaf: 3,
       rock: 2,
     },
-    image: new URL(`@/assets/badge-sunshine-leaf.svg`, import.meta.url).href,
+    image: new URL(
+      `@/assets/badge-cards/badge-sunshine-leaf.svg`,
+      import.meta.url
+    ).href,
     points: 5,
     birds: 0,
     description: () => (
