@@ -4,7 +4,7 @@ const LocationTile = ({ flipped, location }) => {
   const currentLocation = locationSelector(location, flipped);
   return (
     <div
-      className=" bg-cover bg-center flex flex-col items-center py-4 justify-end "
+      className=" bg-cover bg-center flex flex-col items-center py-4 justify-end min-w-44"
       style={{
         backgroundImage: `url(${
           !flipped ? currentLocation.day : currentLocation.night

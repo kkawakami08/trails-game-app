@@ -6,14 +6,14 @@ const StartTwoPlayer = ({ location }) => {
   return (
     <div className="flex  w-full justify-evenly ">
       {location === "start" && (
-        <div className="bg-white flex items-center justify-center rounded-full gap-1  w-[5rem] h-11">
-          <img src={sunIcon} className="w-8" />
-          <img src={photoIcon} className="w-7" />
+        <div className="bg-white flex items-center justify-center rounded-full gap-1 w-[4.3rem] h-9">
+          <img src={sunIcon} className="w-7" />
+          <img src={photoIcon} className="w-5" />
         </div>
       )}
 
-      <div className="bg-white flex items-center rounded-full justify-center   w-[5rem] h-11">
-        <img src={wildlifeIcon} className="w-11" />
+      <div className="bg-white flex items-center justify-center rounded-full gap-1 w-[4.3rem] h-9">
+        <img src={wildlifeIcon} className="w-10" />
       </div>
     </div>
   );

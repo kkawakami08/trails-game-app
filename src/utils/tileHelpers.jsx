@@ -23,8 +23,8 @@ const basicResource = (resource, flipped) => (
       !flipped ? "px-3" : "px-4"
     }`}
   >
-    <img src={resource} className="w-9" />
-    {flipped && <img src={resource} className="w-9" />}
+    <img src={resource} className="w-8" />
+    {flipped && <img src={resource} className="w-8" />}
   </div>
 );
 
@@ -58,7 +58,7 @@ export const locationSelector = (location, flipped) => {
           >
             <img
               src={!flipped ? tradeDayIcon : tradeNightIcon}
-              className="w-28"
+              className="w-24"
             />
           </div>
         ),
@@ -70,12 +70,12 @@ export const locationSelector = (location, flipped) => {
         resource: (
           <div
             className={`bg-white py-3 rounded-full flex gap-1 items-center justify-center ${
-              !flipped ? "px-5" : "px-7"
+              !flipped ? "px-5" : "px-6"
             }`}
           >
-            {!flipped && <img src={tradeIcon} className="w-12" />}
+            {!flipped && <img src={tradeIcon} className="w-10" />}
 
-            <img src={photoIcon} className="w-12" />
+            <img src={photoIcon} className="w-10" />
           </div>
         ),
       };

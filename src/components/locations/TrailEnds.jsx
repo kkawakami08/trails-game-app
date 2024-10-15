@@ -28,8 +28,8 @@ const TrailEnds = ({ playerCount, location }) => {
     bg: trailEndBG,
     btmAction: () => (
       <div className="flex flex-col items-center -mb-2">
-        <img src={sunIcon} className="w-12" />
-        <FaLongArrowAltLeft className="text-3xl text-dark-blue -mt-3" />
+        <img src={sunIcon} className="w-11" />
+        <FaLongArrowAltLeft className="text-2xl text-dark-blue -mt-2" />
       </div>
     ),
     badge: nightBadge,
@@ -40,7 +40,7 @@ const TrailEnds = ({ playerCount, location }) => {
 
   return (
     <div
-      className=" bg-cover bg-center flex flex-col items-center py-4 justify-between relative"
+      className=" bg-cover bg-center flex flex-col items-center py-4 justify-between relative min-w-44"
       style={{
         backgroundImage: `url(${
           location === "start" ? trailStart.bg : trailEnd.bg
@@ -62,7 +62,7 @@ const TrailEnds = ({ playerCount, location }) => {
           }
         />
       )}
-      <div className="bg-white flex flex-col rounded-full items-center gap-2 w-[4.2rem] h-[8rem] justify-center ">
+      <div className="bg-white flex flex-col rounded-full items-center gap-2 w-14 h-28 justify-center ">
         {location === "start" ? trailStart.btmAction() : trailEnd.btmAction()}
 
         <img
