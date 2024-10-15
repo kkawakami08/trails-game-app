@@ -4,6 +4,10 @@ import canteen from "@/assets/icon-canteen.svg";
 import dayBadge from "@/assets/icon-badge-start.svg";
 import nightBadge from "@/assets/icon-badge-end.svg";
 import sunIcon from "@/assets/icon-sun.svg";
+import acornIcon from "@/assets/icon-acorn.svg";
+import leafIcon from "@/assets/icon-leaf.svg";
+import rockIcon from "@/assets/icon-rock.svg";
+
 import { TiLocationArrow } from "react-icons/ti";
 import { FaLongArrowAltLeft } from "react-icons/fa";
 
@@ -17,7 +21,9 @@ const TrailEnds = ({ playerCount, location }) => {
     badge: dayBadge,
     arrowClass: "bg-dark-green right-2",
     arrowRotation: "rotate-45",
+    resources: [rockIcon, acornIcon, leafIcon],
   };
+
   const trailEnd = {
     bg: trailEndBG,
     btmAction: () => (
@@ -29,11 +35,12 @@ const TrailEnds = ({ playerCount, location }) => {
     badge: nightBadge,
     arrowClass: "bg-light-blue left-2",
     arrowRotation: "-rotate-[137deg]",
+    resources: [leafIcon, acornIcon, rockIcon],
   };
 
   return (
     <div
-      className="h-[26rem] w-56 bg-cover bg-center flex flex-col items-center py-4 justify-between relative"
+      className=" bg-cover bg-center flex flex-col items-center py-4 justify-between relative"
       style={{
         backgroundImage: `url(${
           location === "start" ? trailStart.bg : trailEnd.bg
@@ -41,9 +48,19 @@ const TrailEnds = ({ playerCount, location }) => {
       }}
     >
       {playerCount == 4 ? (
-        <StartFourPlayer location={location} />
+        <StartFourPlayer
+          location={location}
+          resources={
+            location === "start" ? trailStart.resources : trailEnd.resources
+          }
+        />
       ) : (
-        <StartTwoPlayer location={location} />
+        <StartTwoPlayer
+          location={location}
+          resources={
+            location === "start" ? trailStart.resources : trailEnd.resources
+          }
+        />
       )}
       <div className="bg-white flex flex-col rounded-full items-center gap-2 w-[4.2rem] h-[8rem] justify-center ">
         {location === "start" ? trailStart.btmAction() : trailEnd.btmAction()}

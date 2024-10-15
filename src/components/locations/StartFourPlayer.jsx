@@ -1,14 +1,7 @@
 import sunIcon from "@/assets/icon-sun.svg";
 import photoIcon from "@/assets/icon-photo.svg";
-import acornIcon from "@/assets/icon-acorn.svg";
-import leafIcon from "@/assets/icon-leaf.svg";
-import rockIcon from "@/assets/icon-rock.svg";
 
-const StartFourPlayer = ({ location }) => {
-  const resources =
-    location === "start"
-      ? [rockIcon, acornIcon, leafIcon]
-      : [leafIcon, acornIcon, rockIcon];
+const StartFourPlayer = ({ location, resources }) => {
   return (
     <div className="flex  w-full justify-evenly ">
       {location === "start" && (
