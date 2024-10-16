@@ -2,6 +2,8 @@
 
 This project is a recreation of the **TRAILS** board game, developed as a part of my coding portfolio. The application is built using **React**, **Vite**, and **Tailwind CSS** to enhance design flexibility and functionality. The board game combines beautiful visuals with thoughtful mechanics to create an engaging experience, so I wanted to try and emulate it as best I can. While the logic for gameplay is still in progress, the design aspects are largely complete.
 
+[Link to online project](https://kkawakami08.github.io/trails-game-app/)
+
 ## Current Features
 
 - **Trail Path Layout**: The trail path layout is dynamically rendered based on the number of players and whether it's the user's first time playing the game.
