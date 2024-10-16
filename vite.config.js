@@ -5,6 +5,7 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: "/trails-game-app/",
   plugins: [react(), svgr()],
   resolve: {
     alias: {
