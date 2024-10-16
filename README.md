@@ -1,47 +1,30 @@
-# Trails Board Game Digital Recreation
+# Trails Game App
 
-This project is a digital recreation of the Trails board game, implemented as a JavaScript application using React, Tailwind CSS, and Vite. I wanted the challenge of coming up with the logic to implement smooth gameplay. Although the functionality is not completed yet, I have been able to recreate some items from the games such as the badges and trail tiles (both for 2-3/4 players and day/night sides of the tiles).
+This project is a recreation of the **TRAILS** board game, developed as a part of my coding portfolio. The application is built using **React**, **Vite**, and **Tailwind CSS** to enhance design flexibility and functionality. The board game combines beautiful visuals with thoughtful mechanics to create an engaging experience, so I wanted to try and emulate it as best I can. While the logic for gameplay is still in progress, the design aspects are largely complete.
 
-## Project Overviews
+## Current Features
 
-Trails is a board game where players hike along trails, collecting resources and completing objectives. This digital version aims to capture the essence of the physical game while leveraging web technologies for an interactive experience.
+- **Trail Path Layout**: The trail path layout is dynamically rendered based on the number of players and whether it's the user's first time playing the game.
+- **Components**:
+  - **Trail Locations**: I streamlined the design by using 2 components rather than 7 individual ones for each trail location.
+  - **Badge Component**: The badge component represents key game elements with attributes like:
+    - Resource type
+    - Points
+    - Birds
+    - Actions
+    - Cost
+    - Image
+    - Background color
+    - Tooltip descriptions for player guidance
 
-## Technologies Used
+## Tools & Technologies
 
-- **React**: A JavaScript library for building user interfaces
-- **Tailwind CSS**: A utility-first CSS framework
-- **Vite**: A build tool that aims to provide a faster and leaner development experience for modern web projects
+- **React**: For efficient component-based UI rendering.
+- **Vite**: Ensures a fast development build process.
+- **Tailwind CSS**: Used for styling, making the layout responsive and visually appealing.
+- **Figma**: Initial design and color schemes were drafted in [Figma](https://www.figma.com/board/lc7dZBVL7oij73iVQMnRxD/Trails---Game-App?node-id=0-1&t=ZoAZj0LtIEAR3tSy-1) before being implemented into code.
 
-## Installation
+## Upcoming Features
 
-1. Clone the repository:
-   ```
-   git clone https://github.com/kkawakami08/trails-game-app.git
-   ```
-2. Navigate to the project directory:
-   ```
-   cd trails-game-app
-   ```
-3. Install dependencies:
-   ```
-   npm install
-   ```
-4. Run the development server:
-   ```
-   npm run dev
-   ```
-
-## Features
-
-- [ ] Interactive game board
-- [ ] Player turn management
-- [ ] Resource collection system
-- [ ] Objective completion tracking
-- [ ] Multiplayer support (local)
-
-## Acknowledgements
-
-- Original Trails board game creators
-- React community for excellent documentation and support
-- Tailwind CSS for streamlining the styling process
-- Vite team for providing a fast and efficient build tool
+- **Game Logic**: Integration of full gameplay mechanics, including player actions, resource management, and score calculation.
+- **Improved User Experience**: Further refinement of user interactions
