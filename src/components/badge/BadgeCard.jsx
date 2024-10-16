@@ -14,6 +14,7 @@ const BadgeCard = ({ badge }) => {
         className="w-32  my-6 shadow-md shadow-black/40 rounded-full"
       />
       <BadgeCost cost={badge.cost} resourceType={badge.type} />
+
       <Tooltip
         content={badge.explanation}
         placement="bottom"

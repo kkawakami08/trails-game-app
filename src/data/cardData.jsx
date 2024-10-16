@@ -50,7 +50,7 @@ export const badges = [
     points: 3,
     birds: 2,
     description: () => {},
-    explanation: null,
+    explanation: "Worth 3 points and 2 birds",
     powerId: null,
   },
   {
@@ -68,7 +68,7 @@ export const badges = [
     points: 3,
     birds: 2,
     description: () => {},
-    explanation: null,
+    explanation: "Worth 3 points and 2 birds",
     powerId: null,
   },
   {
@@ -86,7 +86,7 @@ export const badges = [
     points: 3,
     birds: 2,
     description: () => {},
-    explanation: null,
+    explanation: "Worth 3 points and 2 birds",
     powerId: null,
   },
   {
@@ -173,7 +173,7 @@ export const badges = [
     points: 6,
     birds: 0,
     description: () => {},
-    explanation: null,
+    explanation: "Gain 6 points",
     powerId: null,
   },
   {
@@ -191,7 +191,7 @@ export const badges = [
     points: 6,
     birds: 0,
     description: () => {},
-    explanation: null,
+    explanation: "Gain 6 points",
     powerId: null,
   },
   {
@@ -209,7 +209,7 @@ export const badges = [
     points: 6,
     birds: 0,
     description: () => {},
-    explanation: null,
+    explanation: "Gain 6 points",
     powerId: null,
   },
   {
