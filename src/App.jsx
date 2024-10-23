@@ -1,6 +1,8 @@
 import BadgeCard from "./components/badge/BadgeCard";
 import MainTrail from "./components/locations/MainTrail";
 
+import { Tooltip } from "flowbite-react";
+
 import { badges } from "@/data/cardData";
 
 import { useState } from "react";
@@ -24,48 +26,63 @@ function App() {
         </div>
       </div>
       <MainTrail playerCount={playerCount} firstTime={firstTime} />
-      <div className="flex flex-col md:flex-row gap-3 font-bold text-off-white items-center ">
-        <p className="bg-light-blue  text-2xl  tracking-wider p-3 rounded-lg">
-          How many players?
-        </p>
-        <div className="flex gap-3">
-          {players.map((count) => (
+      <Tooltip
+        content="Trail start & end changes depending on number of players (2-3/4)"
+        placement="right"
+        trigger="hover"
+        animation="duration-200"
+        className=" bg-slate-200 text-black text-center text-xs"
+      >
+        <div className="flex flex-col md:flex-row gap-3 font-bold text-off-white items-center ">
+          <p className="bg-light-blue  text-2xl  tracking-wider p-3 rounded-lg">
+            How many players?
+          </p>
+          <div className="flex gap-3">
+            {players.map((count) => (
+              <button
+                key={count}
+                className={`${
+                  playerCount === count ? activeBtn : inActiveBtn
+                } w-10 h-10 rounded-full text-xl `}
+                onClick={() => setPlayerCount(count)}
+              >
+                {count}
+              </button>
+            ))}
+          </div>
+        </div>
+      </Tooltip>
+      <Tooltip
+        content="First time players have a recommended layout for the trail"
+        placement="right"
+        trigger="hover"
+        animation="duration-200"
+        className="-ml-28 bg-slate-200 text-black text-center text-xs"
+      >
+        <div className="flex flex-col gap-3 font-bold text-off-white justify-center items-center w-4/5 text-center md:flex-row ">
+          <p className="bg-light-blue  text-2xl  tracking-wider p-3 rounded-lg">
+            Is this your first time playing Trails?
+          </p>
+          <div className="flex gap-3">
             <button
-              key={count}
               className={`${
-                playerCount === count ? activeBtn : inActiveBtn
-              } w-10 h-10 rounded-full text-xl `}
-              onClick={() => setPlayerCount(count)}
+                firstTime ? activeBtn : inActiveBtn
+              } px-5 py-3 rounded-lg text-xl`}
+              onClick={() => setFirstTime(true)}
             >
-              {count}
+              Yes
             </button>
-          ))}
+            <button
+              className={`${
+                !firstTime ? activeBtn : inActiveBtn
+              } px-5 py-3 rounded-lg text-xl`}
+              onClick={() => setFirstTime(false)}
+            >
+              No
+            </button>
+          </div>
         </div>
-      </div>
-      <div className="flex flex-col gap-3 font-bold text-off-white justify-center items-center w-4/5 text-center md:flex-row ">
-        <p className="bg-light-blue  text-2xl  tracking-wider p-3 rounded-lg">
-          Is this your first time playing Trails?
-        </p>
-        <div className="flex gap-3">
-          <button
-            className={`${
-              firstTime ? activeBtn : inActiveBtn
-            } px-5 py-3 rounded-lg text-xl`}
-            onClick={() => setFirstTime(true)}
-          >
-            Yes
-          </button>
-          <button
-            className={`${
-              !firstTime ? activeBtn : inActiveBtn
-            } px-5 py-3 rounded-lg text-xl`}
-            onClick={() => setFirstTime(false)}
-          >
-            No
-          </button>
-        </div>
-      </div>
-
+      </Tooltip>
       <div className="flex gap-3 flex-wrap w-full justify-center px-3 lg:max-w-[90rem]">
         {badges.map((badge, index) => (
           <BadgeCard badge={badge} key={index} />

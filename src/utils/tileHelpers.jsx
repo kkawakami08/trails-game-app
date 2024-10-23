@@ -17,16 +17,69 @@ import tradeDayIcon from "@/assets/icon-trade-day.svg";
 import photoIcon from "@/assets/icon-photo.svg";
 import tradeIcon from "@/assets/icon-trade.svg";
 
-const basicResource = (resource, flipped) => (
-  <div
-    className={`bg-white py-3 rounded-full flex gap-2 items-center justify-center ${
-      !flipped ? "px-3" : "px-4"
-    }`}
-  >
-    <img src={resource} className="w-8" />
-    {flipped && <img src={resource} className="w-8" />}
-  </div>
-);
+import { useState, useEffect } from "react";
+
+const DelayedPhotoResource = ({ flipped }) => {
+  const [showTradeIcon, setShowTradeIcon] = useState(!flipped);
+  const [padding, setPadding] = useState(!flipped ? "px-5" : "px-6");
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowTradeIcon(!flipped);
+      setPadding(!flipped ? "px-5" : "px-6");
+    }, 200);
+
+    return () => clearTimeout(timer);
+  }, [flipped]);
+
+  return (
+    <div
+      className={`bg-white py-3 rounded-full flex gap-1 items-center justify-center ${padding}`}
+    >
+      {showTradeIcon && <img src={tradeIcon} className="w-10" />}
+      <img src={photoIcon} className="w-10" />
+    </div>
+  );
+};
+
+const BasicResource = ({ resource, flipped }) => {
+  const [showSecondIcon, setShowSecondIcon] = useState(flipped);
+  const [padding, setPadding] = useState(!flipped ? "px-3" : "px-4");
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowSecondIcon(flipped);
+      setPadding(!flipped ? "px-3" : "px-4");
+    }, 200);
+
+    return () => clearTimeout(timer);
+  }, [flipped]);
+
+  return (
+    <div
+      className={`bg-white py-3 rounded-full flex gap-2 items-center justify-center ${padding}`}
+    >
+      <img src={resource} className="w-8" />
+      {showSecondIcon && <img src={resource} className="w-8" />}
+    </div>
+  );
+};
+
+const DelayedTradeIcon = ({ flipped }) => {
+  const [displayedIcon, setDisplayedIcon] = useState(
+    flipped ? tradeNightIcon : tradeDayIcon
+  );
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setDisplayedIcon(flipped ? tradeNightIcon : tradeDayIcon);
+    }, 300);
+
+    return () => clearTimeout(timer);
+  }, [flipped]);
+
+  return <img src={displayedIcon} className="w-24" />;
+};
 
 export const locationSelector = (location, flipped) => {
   switch (location) {
@@ -34,19 +87,19 @@ export const locationSelector = (location, flipped) => {
       return {
         day: acornDayBG,
         night: acornNightBG,
-        resource: basicResource(acornIcon, flipped),
+        resource: <BasicResource resource={acornIcon} flipped={flipped} />,
       };
     case "leaf":
       return {
         day: leafDayBG,
         night: leafNightBG,
-        resource: basicResource(leafIcon, flipped),
+        resource: <BasicResource resource={leafIcon} flipped={flipped} />,
       };
     case "rock":
       return {
         day: rockDayBG,
         night: rockNightBG,
-        resource: basicResource(rockIcon, flipped),
+        resource: <BasicResource resource={rockIcon} flipped={flipped} />,
       };
     case "trade":
       return {
@@ -56,10 +109,7 @@ export const locationSelector = (location, flipped) => {
           <div
             className={`bg-white py-3 rounded-full flex gap-2 items-center justify-center px-4`}
           >
-            <img
-              src={!flipped ? tradeDayIcon : tradeNightIcon}
-              className="w-24"
-            />
+            <DelayedTradeIcon flipped={flipped} />
           </div>
         ),
       };
@@ -67,17 +117,7 @@ export const locationSelector = (location, flipped) => {
       return {
         day: photoDayBG,
         night: photoNightBG,
-        resource: (
-          <div
-            className={`bg-white py-3 rounded-full flex gap-1 items-center justify-center ${
-              !flipped ? "px-5" : "px-6"
-            }`}
-          >
-            {!flipped && <img src={tradeIcon} className="w-10" />}
-
-            <img src={photoIcon} className="w-10" />
-          </div>
-        ),
+        resource: <DelayedPhotoResource flipped={flipped} />,
       };
   }
 };
