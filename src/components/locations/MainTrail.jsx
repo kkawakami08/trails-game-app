@@ -1,3 +1,4 @@
+import { Tooltip } from "flowbite-react";
 import LocationTile from "./LocationTile";
 import TrailEnds from "./TrailEnds";
 
@@ -8,16 +9,21 @@ function MainTrail({ playerCount, firstTime }) {
   );
 
   return (
-    <div className="md:max-w-7xl border-4 border-off-white rounded-lg grid grid-cols-7 h-[20rem] relative">
-      <p className="absolute z-20 bg-yellow-sun text-black-wildlife text-sm font-bold tracking-wide px-4 py-3 rounded-lg -bottom-20 -left-2  w-32 text-center">
-        CLICK THE TRAIL TILES!
-      </p>
-      <TrailEnds playerCount={playerCount} location={"start"} />
-      {(firstTime ? starterTrailOrder : randomTrailorder).map((location) => (
-        <LocationTile flipped={false} location={location} key={location} />
-      ))}
-      <TrailEnds playerCount={playerCount} location={"end"} />
-    </div>
+    <Tooltip
+      content="Click on the trail locations to flip!"
+      placement="top"
+      trigger="hover"
+      animation="duration-200"
+      className=" bg-slate-200 text-black text-center text-xs mt-1 "
+    >
+      <div className="md:max-w-7xl border-4 border-off-white rounded-lg grid grid-cols-7 h-[20rem] ">
+        <TrailEnds playerCount={playerCount} location={"start"} />
+        {(firstTime ? starterTrailOrder : randomTrailorder).map((location) => (
+          <LocationTile flipped={false} location={location} key={location} />
+        ))}
+        <TrailEnds playerCount={playerCount} location={"end"} />
+      </div>
+    </Tooltip>
   );
 }
 

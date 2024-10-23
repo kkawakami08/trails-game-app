@@ -31,9 +31,9 @@ function App() {
         placement="right"
         trigger="hover"
         animation="duration-200"
-        className=" bg-slate-200 text-black text-center text-xs"
+        className=" bg-slate-200 text-black text-center text-xs w-48 xl:w-fit "
       >
-        <div className="flex flex-col md:flex-row gap-3 font-bold text-off-white items-center ">
+        <div className="flex flex-col lg:flex-row gap-3 font-bold text-off-white items-center ">
           <p className="bg-light-blue  text-2xl  tracking-wider p-3 rounded-lg">
             How many players?
           </p>
@@ -57,10 +57,10 @@ function App() {
         placement="right"
         trigger="hover"
         animation="duration-200"
-        className="-ml-28 bg-slate-200 text-black text-center text-xs"
+        className=" bg-slate-200 text-black text-center text-xs w-48 2xl:w-fit"
       >
-        <div className="flex flex-col gap-3 font-bold text-off-white justify-center items-center w-4/5 text-center md:flex-row ">
-          <p className="bg-light-blue  text-2xl  tracking-wider p-3 rounded-lg">
+        <div className="flex flex-col gap-3 font-bold text-off-white justify-center items-center  text-center md:w-full lg:flex-row md:items-center -mt-1">
+          <p className="bg-light-blue w-72 xl:w-fit  text-2xl  tracking-wider p-3 rounded-lg">
             Is this your first time playing Trails?
           </p>
           <div className="flex gap-3">
